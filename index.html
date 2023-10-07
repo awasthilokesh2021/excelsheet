@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menus.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <div id="options">
+      <div class="menus">
+        <div id="Bold" onclick="onClickBold(this)">B</div>
+        <div id="Itelic" onclick="onClickItelic(this)">I</div>
+        <div id="Underline" onclick="onClickUnderLine(this)">U</div>
+
+        <span
+          class="material-icons active-option text-align"
+          data-value="left"
+          onclick="onClicktextAlign(this)"
+          >format_align_left</span
+        >
+        <span
+          class="material-icons text-align"
+          data-value="center"
+          onclick="onClicktextAlign(this)"
+          >format_align_center</span
+        >
+        <span
+          class="material-icons text-align"
+          data-value="right"
+          onclick="onClicktextAlign(this)"
+          >format_align_right</span
+        >
+
+        <div id="text-color">
+          <lable for="color-picker">
+            <span class="material-icons">border_color</span>
+          </lable>
+          <input
+            type="color"
+            onchange="onChangeTextColor(this)"
+            id="bgcolor-picker"
+            style="width: 0; height: 0"
+          />
+        </div>
+
+        <div id="bg-color">
+          <lable for="color-picker">
+            <span class="material-icons">format_color_fill</span>
+          </lable>
+          <input
+            type="color"
+            onchange="onChangeBackGroundColor(this)"
+            id="bgcolor-picker"
+            style="width: 0; height: 0"
+          />
+        </div>
+      </div>
+
+      <h3>
+        <span id="active-cell">Null</span>
+      </h3>
+    </div>
+
+    <main style="width: 100vw; height: 100vh; margin: auto; overflow: scroll">
+      <div id="header">
+        <b style="position: sticky; left: 0; top: 0; background-color: white"
+          >S.NO</b
+        >
+      </div>
+      <section id="body">
+        <!-- <div id="row"></div> -->
+      </section>
+    </main>
+
+    <script src="/options.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
